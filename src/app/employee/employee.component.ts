@@ -15,7 +15,7 @@ export class EmployeeComponent{
   constructor(){
   	this.employee = new Employee('Luis Sastré', 22, 'Software Developer', true);
   	this.employees = [
-  		new Employee('Brandon', 24, 'Chef', true),
+  		new Employee('Brandon', 24, 'Chef', false),
   		new Employee('Carlo', 23, 'Constructor', true),
   		new Employee('Luis', 22, 'Vendedor', false)
   	];
@@ -25,5 +25,9 @@ export class EmployeeComponent{
   ngOnInit(){
     console.log(this.employee);
     console.log(this.employees);
+  }
+
+  changeExternal(value){
+  	this.external_employee = value;
   }
 }

@@ -1,16 +1,26 @@
 <h1 style="color: blue"> {{title_employee}} </h1>
 
 <strong> Empleado </strong>
-<ul *ngIf="external_employee == true">
-	<li>Nombre: {{employee.name}}</li>
-	<li>Edad: {{employee.age}}</li>
-	<li>Cargo: {{employee.position}}</li>
-	<li>Contratado: {{employee.hired}}</li>
-</ul>
+<br><br>
 
-<ul *ngIf="external_employee == false">
-	<li>Nombre: {{employees[0].name}}</li>
-	<li>Edad: {{employees[0].age}}</li>
-	<li>Cargo: {{employees[0].position}}</li>
-	<li>Contratado: {{employees[0].hired}}</li>
-</ul>
+<div *ngIf="external_employee == true">
+	<button (click)="changeExternal(false)">Mostrar empleado</button>
+	<ul>
+		<li>Nombre: {{employee.name}}</li>
+		<li>Edad: {{employee.age}}</li>
+		<li>Cargo: {{employee.position}}</li>
+		<li *ngIf="employee.hired == true">Esta contratado</li>
+		<li *ngIf="employee.hired == false">No esta contratado</li>
+	</ul>
+</div>
+
+<div *ngIf="external_employee == false">
+	<button (click)="changeExternal(true)">Mostrar trabajador</button>
+	<ul>
+		<li>Nombre: {{employees[0].name}}</li>
+		<li>Edad: {{employees[0].age}}</li>
+		<li>Cargo: {{employees[0].position}}</li>
+		<li *ngIf="employees[0].hired == true">Esta contratado</li>
+		<li *ngIf="employees[0].hired == false">No esta contratado</li>
+	</ul>
+</div>
