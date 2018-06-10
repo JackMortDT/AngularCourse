@@ -27,10 +27,21 @@ export class FruitComponent{
   ngOnInit(){
   	this.changeAge(30);
   	this.helloWorld(this.username);
+
+  	//Variables 
+  	var one = 1;
+  	var two = 2;
+
+  	if(one === 1){
+  		let one = 3;
+  		var two = 88;
+  		console.log("Number inside if: " + one + "..." + two);
+  	}
+  	console.log("Number outside if: " + one + "..." + two);
   }
 
   helloWorld(username){
-  	alert('Hello ' + username + '!');
+  	console.log('Hello ' + username + '!');
   }
 
   changeAge(age){
