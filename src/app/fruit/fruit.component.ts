@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'fruit',
-	template: `<h2> {{name_component}} </h2>
-						 <p> {{fruit_list}} </p>`
+	templateUrl: './fruit.component.html'
 }) 
 
 export class FruitComponent{
