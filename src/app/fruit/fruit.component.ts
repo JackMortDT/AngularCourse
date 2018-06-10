@@ -23,4 +23,17 @@ export class FruitComponent{
   	console.log("Hola");
   	console.log(this.games);
   }
+
+  ngOnInit(){
+  	this.changeAge(30);
+  	this.helloWorld(this.username);
+  }
+
+  helloWorld(username){
+  	alert('Hello ' + username + '!');
+  }
+
+  changeAge(age){
+  	this.age = age;
+  }
 }
