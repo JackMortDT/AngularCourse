@@ -1,15 +1,14 @@
 <h1 style="color: blue"> {{title_employee}} </h1>
 
 <strong> Empleado </strong>
-<ul>
+<ul *ngIf="external_employee == true">
 	<li>Nombre: {{employee.name}}</li>
 	<li>Edad: {{employee.age}}</li>
 	<li>Cargo: {{employee.position}}</li>
 	<li>Contratado: {{employee.hired}}</li>
 </ul>
 
-<strong> Empleado de lista </strong>
-<ul>
+<ul *ngIf="external_employee == false">
 	<li>Nombre: {{employees[0].name}}</li>
 	<li>Edad: {{employees[0].age}}</li>
 	<li>Cargo: {{employees[0].position}}</li>

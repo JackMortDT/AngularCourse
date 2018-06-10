@@ -10,7 +10,7 @@ export class EmployeeComponent{
   public title_employee = 'Componente de empleado';
   public employee:Employee;
   public employees:Array<Employee>;
-
+  public external_employee:boolean;
 
   constructor(){
   	this.employee = new Employee('Luis Sastré', 22, 'Software Developer', true);
@@ -19,6 +19,7 @@ export class EmployeeComponent{
   		new Employee('Carlo', 23, 'Constructor', true),
   		new Employee('Luis', 22, 'Vendedor', false)
   	];
+  	this.external_employee = false;
   }
 
   ngOnInit(){
