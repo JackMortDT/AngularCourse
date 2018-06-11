@@ -11,6 +11,7 @@ export class EmployeeComponent{
   public employee:Employee;
   public employees:Array<Employee>;
   public external_employee:boolean;
+  public color:string;
 
   constructor(){
   	this.employee = new Employee('Luis Sastré', 22, 'Software Developer', true);
@@ -20,6 +21,7 @@ export class EmployeeComponent{
   		new Employee('Luis', 22, 'Vendedor', false)
   	];
   	this.external_employee = false;
+  	this.color = 'blue';
   }
 
   ngOnInit(){
